@@ -33,6 +33,22 @@ public class TimeDemo {
         ZoneId id = ZoneId.of("Asia/Kolkata");
         System.out.println("ZoneId: " + id);
 
+        ZoneId currentZone = ZoneId.systemDefault();
+        System.out.println("CurrentZone: " + currentZone);
 
+        LocalDate today = LocalDate.now();
+        System.out.println("Current date: " + today);
+
+        LocalDate nextWeek = today.plus(2, ChronoUnit.WEEKS);
+        System.out.println("two weeks after now: " + nextWeek);
+
+        LocalDate nextMonth = today.plus(6, ChronoUnit.MONTHS);
+        System.out.println("6 months after now: " + nextMonth);
+
+        LocalDate nextYear = today.plus(5, ChronoUnit.YEARS);
+        System.out.println("5 years after now: " + nextYear);
+
+        LocalDate nextDecade = today.plus(2, ChronoUnit.DECADES);
+        System.out.println("20 years after now: " + nextDecade);
     }
 }
